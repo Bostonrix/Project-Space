@@ -257,6 +257,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1283941209753577114}
+  - component: {fileID: 7050730412260114899}
   m_Layer: 0
   m_Name: Lever
   m_TagString: Untagged
@@ -281,6 +282,27 @@ Transform:
   - {fileID: 316753353736043733}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &7050730412260114899
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4868049406710175136}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ea1694a5b82d034428cf0aa0cd227204, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &8226599517804803228
 GameObject:
   m_ObjectHideFlags: 0
@@ -398,6 +420,7 @@ GameObject:
   - component: {fileID: 1213194136390903584}
   - component: {fileID: 3958616845872738483}
   - component: {fileID: 1577901074948579985}
+  - component: {fileID: 6153368468042740314}
   m_Layer: 0
   m_Name: Cylinder (2)
   m_TagString: Untagged
@@ -493,3 +516,15 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!114 &6153368468042740314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8355787576245055430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 564cd78e5e3dc4ea896acbcb2da9885a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

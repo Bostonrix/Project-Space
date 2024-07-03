@@ -18,11 +18,10 @@ public class LookAtInteract : MonoBehaviour
         {
             if (hit.collider.TryGetComponent<Console>(out var action)){ //if raycast object is a GameObject with the Console script : continue
                 action.OnLook();
-                if (Input.GetMouseButtonDown(0)) //left mouse button pressed
-                {
-                        action.buttonPressed(); //execute raycast object's OnClickAction method
-                } else if (Input.GetMouseButtonUp(0)){
-                    action.buttonReleased();
+                if (Input.GetMouseButtonDown(0)){ //left mouse button pressed
+                        action.buttonPressed(); //execute raycast object's buttonPressed method
+                } else if (Input.GetMouseButtonUp(0)){ //left mouse button released
+                    action.buttonReleased();//execute raycats object's button released method
                 }
             }
         }
