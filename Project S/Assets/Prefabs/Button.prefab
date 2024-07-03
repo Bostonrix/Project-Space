@@ -118,6 +118,7 @@ GameObject:
   - component: {fileID: 4678159800435402402}
   - component: {fileID: 1987758302137435274}
   - component: {fileID: 5457720638132851746}
+  - component: {fileID: 6458936343695305556}
   - component: {fileID: 4316193016658671948}
   m_Layer: 0
   m_Name: Button
@@ -191,6 +192,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &6458936343695305556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2983683564326453308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 564cd78e5e3dc4ea896acbcb2da9885a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!136 &4316193016658671948
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -206,14 +219,14 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5000001
-  m_Height: 2
+  m_Radius: 0.57
+  m_Height: 6.07
   m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+  m_Center: {x: -0.030532718, y: 0, z: -0.00000011920929}
 --- !u!1 &5683826992790000745
 GameObject:
   m_ObjectHideFlags: 0
@@ -224,6 +237,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2412687488731287132}
   - component: {fileID: 3548018931927649451}
+  - component: {fileID: 355798971281494486}
   m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
@@ -269,3 +283,15 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &355798971281494486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5683826992790000745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2af970680b0c40f4481f1cf757ea6da7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
