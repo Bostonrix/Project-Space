@@ -20,7 +20,9 @@ public class LookAtInteract : MonoBehaviour
                 action.OnLook();
                 if (Input.GetMouseButtonDown(0)) //left mouse button pressed
                 {
-                        action.OnClickAction(); //execute raycast object's OnClickAction method
+                        action.buttonPressed(); //execute raycast object's OnClickAction method
+                } else if (Input.GetMouseButtonUp(0)){
+                    action.buttonReleased();
                 }
             }
         }
