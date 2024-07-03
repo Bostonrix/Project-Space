@@ -8,7 +8,6 @@ using UnityEngine.EventSystems;
 public class Console : MonoBehaviour
 {
 
-    public Outline outline;
     public void Start(){
         // outline = gameObject.GetComponent<Outline>(); get outline shader on gameobject
         // outline.enabled = false; set the ouline to false
