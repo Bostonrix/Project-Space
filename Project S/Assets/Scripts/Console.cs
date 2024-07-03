@@ -28,12 +28,11 @@ public void OnLookAway(){
    //Detects if the player clicks object
     public void buttonPressed()
     {
-        //Output to console the clicked GameObject's name and the following message. You can replace this with your own actions for when clicking the GameObject.
-        ani.SetTrigger("Pushed");
+        ani.SetTrigger("Pushed"); //plays buttonpressed animation
 
     }
 
     public void buttonReleased(){
-        ani.ResetTrigger("Pushed");
+        ani.ResetTrigger("Pushed");//resets trigger and stop the button animation
     }
 }
