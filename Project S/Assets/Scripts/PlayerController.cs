@@ -32,7 +32,12 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        // if bool true then playermove
+        playerMove();
+       
+    }
 
+    void playerMove() {
         #region Handles Movment
         Vector3 forward = transform.TransformDirection(Vector3.forward);
         Vector3 right = transform.TransformDirection(Vector3.right);
