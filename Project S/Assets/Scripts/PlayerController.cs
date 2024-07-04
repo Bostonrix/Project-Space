@@ -32,6 +32,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        // if bool true then playermove
         playerMove();
        
     }

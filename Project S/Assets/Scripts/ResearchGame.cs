@@ -64,7 +64,7 @@ public class ResearchGame : MonoBehaviour
     private float researchScore = 0;
     // The score output, starts at zero
 
-   
+   public GameObject player;
 
 
     // Start is called before the first frame update
@@ -79,7 +79,10 @@ public class ResearchGame : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        player.TryGetComponent<PlayerController>(out var component);
+        if (component.canMove == false){
         ActualGame();
+        }
     }
 
     void ActualGame(){
