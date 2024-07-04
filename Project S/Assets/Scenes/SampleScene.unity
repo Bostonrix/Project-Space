@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -217,6 +217,32 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!1 &36262938 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1821120981265553230, guid: bf5123f12017348f991b7001b89efe55, type: 3}
+  m_PrefabInstance: {fileID: 2342933485539390514}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &36262939
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 36262938}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.33323178, y: 3.3687887, z: 0.939141}
+  m_Center: {x: 0.09620716, y: 1.1843944, z: -0.005135298}
 --- !u!4 &127683977 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5498792633299451295, guid: c8e96145a5185469bae4e61896877655, type: 3}
@@ -1003,8 +1029,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Altitude: 0
-  Research: 0
-  ResearchCap: 0
+  altitudeLossRate: 1
   Fuel: 0
 --- !u!4 &674206088
 Transform:
@@ -1093,6 +1118,7 @@ GameObject:
   - component: {fileID: 869857865}
   - component: {fileID: 869857863}
   - component: {fileID: 869857864}
+  - component: {fileID: 869857866}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1175,6 +1201,15 @@ Transform:
   - {fileID: 476994745}
   m_Father: {fileID: 257344522}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!45 &869857866
+Skybox:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 869857862}
+  m_Enabled: 1
+  m_CustomSkybox: {fileID: 2100000, guid: 81f714daf7144784b8a2f42f1cd30927, type: 2}
 --- !u!4 &1244610336 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3512482366459455020, guid: e2171f53e414945b89d2f18795d48c38, type: 3}
@@ -1640,7 +1675,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1821120981265553230, guid: bf5123f12017348f991b7001b89efe55, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 36262939}
   m_SourcePrefab: {fileID: 100100000, guid: bf5123f12017348f991b7001b89efe55, type: 3}
 --- !u!1001 &8130713011207725662
 PrefabInstance:
