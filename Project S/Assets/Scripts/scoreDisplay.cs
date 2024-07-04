@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class scoreDisplay : MonoBehaviour
 {
-    // Start is called before the first frame update
+
+public GameObject researchGame;
+private float score;
     void Start()
     {
         
@@ -13,6 +15,7 @@ public class scoreDisplay : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        researchGame.TryGetComponent<ResearchGame>(out var scoreHolder);
+        score = scoreHolder.getScore();
     }
 }

@@ -177,4 +177,8 @@ public class ResearchGame : MonoBehaviour
         }
         print(researchScore);
     }
+
+    public float getScore(){
+        return researchScore;
+    }
 }
