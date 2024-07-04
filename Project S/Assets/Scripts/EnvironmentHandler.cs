@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class EnvironmentHandler : MonoBehaviour
 {
-    public int Altitude;
+    public float Altitude;
+    public float altitudeLossRate = 1; //variable to dynamically change altitude drop rate
     public int Fuel;
     private int Flag;
 
@@ -29,13 +30,13 @@ public class EnvironmentHandler : MonoBehaviour
     void AltitudeHandler() {
         if (Flag == 1){
             if (Altitude >= 18000){
-            Altitude -= 1;
+            Altitude -= 1 * Time.deltaTime;
             } else if (Altitude >= 15000){
-                Altitude -= 5;
+                Altitude -= 5 * Time.deltaTime * altitudeLossRate;
             }else if (Altitude >= 10000){
-                    Altitude -= 20;
+                    Altitude -= 20 * Time.deltaTime * altitudeLossRate;
             }else if (Altitude >= 5000){
-                Altitude -= 50;
+                Altitude -= 50 * Time.deltaTime * altitudeLossRate;
             }else {
                 Debug.Log("Game is Over");
                 Flag = 0;
