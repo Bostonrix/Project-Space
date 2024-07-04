@@ -1348,6 +1348,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Altitude: 0
   altitudeLossRate: 1
+  Research: 0
   Fuel: 0
 --- !u!4 &674206088
 Transform:
@@ -1481,6 +1482,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 257344519}
+    - target: {fileID: 8131618316706750522, guid: e2171f53e414945b89d2f18795d48c38, type: 3}
+      propertyPath: Environment
+      value: 
+      objectReference: {fileID: 674206086}
     m_RemovedComponents:
     - {fileID: 1339215319396567249, guid: e2171f53e414945b89d2f18795d48c38, type: 3}
     m_RemovedGameObjects: []
