@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311924, g: 0.38073963, b: 0.3587269, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1282,7 +1282,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d2ae848eef18d40b3125b41ff299b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Altitude: 0
+  Altitude: 20000
   altitudeLossRate: 1
   Research: 0
   ResearchGoal: 0
@@ -1429,6 +1429,71 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2171f53e414945b89d2f18795d48c38, type: 3}
+--- !u!1001 &752668630
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2943133563957921515, guid: b74fde01acad09349b0c62b2fdf7ff23, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2943133563957921515, guid: b74fde01acad09349b0c62b2fdf7ff23, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -16.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2943133563957921515, guid: b74fde01acad09349b0c62b2fdf7ff23, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -45.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2943133563957921515, guid: b74fde01acad09349b0c62b2fdf7ff23, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2943133563957921515, guid: b74fde01acad09349b0c62b2fdf7ff23, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2943133563957921515, guid: b74fde01acad09349b0c62b2fdf7ff23, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.9521884
+      objectReference: {fileID: 0}
+    - target: {fileID: 2943133563957921515, guid: b74fde01acad09349b0c62b2fdf7ff23, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.30551168
+      objectReference: {fileID: 0}
+    - target: {fileID: 2943133563957921515, guid: b74fde01acad09349b0c62b2fdf7ff23, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 35.578
+      objectReference: {fileID: 0}
+    - target: {fileID: 2943133563957921515, guid: b74fde01acad09349b0c62b2fdf7ff23, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 2943133563957921515, guid: b74fde01acad09349b0c62b2fdf7ff23, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3477263464049210941, guid: b74fde01acad09349b0c62b2fdf7ff23, type: 3}
+      propertyPath: Environment
+      value: 
+      objectReference: {fileID: 674206086}
+    - target: {fileID: 3477263464049210941, guid: b74fde01acad09349b0c62b2fdf7ff23, type: 3}
+      propertyPath: altitudeRealScale
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 9220779024987113884, guid: b74fde01acad09349b0c62b2fdf7ff23, type: 3}
+      propertyPath: m_Name
+      value: Blackhole
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b74fde01acad09349b0c62b2fdf7ff23, type: 3}
 --- !u!1 &869857862
 GameObject:
   m_ObjectHideFlags: 0
@@ -7349,3 +7414,4 @@ SceneRoots:
   - {fileID: 690913504}
   - {fileID: 302998661}
   - {fileID: 2105913729}
+  - {fileID: 752668630}

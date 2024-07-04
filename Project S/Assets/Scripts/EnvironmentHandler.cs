@@ -19,7 +19,7 @@ public class EnvironmentHandler : MonoBehaviour
         Fuel = 100;
         Flag = 1;
         Research = 0f;
-        ResearchGoal = 60f;
+        ResearchGoal = 10f;
     }
 
     // Update is called once per frame
