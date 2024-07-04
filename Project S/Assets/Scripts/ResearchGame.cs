@@ -198,7 +198,6 @@ public class ResearchGame : MonoBehaviour
         {
             researchScore += researchPointsPerSecond * Time.deltaTime;
         }
-        print(researchScore);
     }
 
     public float getScore(){
