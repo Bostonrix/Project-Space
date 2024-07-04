@@ -96,7 +96,6 @@ public class ResearchGame : MonoBehaviour
                 newVar.Research = researchScore;
 
                 // reset score.
-                researchScore = 0;
                 flag = true;
             }
         }
