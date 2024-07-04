@@ -1299,7 +1299,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!114 &674206087
 MonoBehaviour:
@@ -1890,6 +1890,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: fuelLever
       objectReference: {fileID: 0}
+    - target: {fileID: 7833329878427797991, guid: cb48e596ce65199439768cb01eb3b272, type: 3}
+      propertyPath: Environment
+      value: 
+      objectReference: {fileID: 674206086}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
