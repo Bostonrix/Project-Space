@@ -24,7 +24,7 @@ public class LookAtInteract : MonoBehaviour
                 } else if (Input.GetMouseButtonUp(0)){ //left mouse button released
                     action.buttonReleased();//execute raycats object's button released method
                 }
-            } else if (hit.collider.TryGetComponent<ResearchGame>(out var researchGame)){
+            } else if (hit.collider.gameObject.name.Equals("ResearchGame")){
                 if(Input.GetMouseButton(0)){
                     gameObject.TryGetComponent<PlayerController>(out var player);
                     player.canMove = !player.canMove;
