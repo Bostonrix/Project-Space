@@ -23,12 +23,20 @@ public class LookAtInteract : MonoBehaviour
                 } else if (Input.GetMouseButtonUp(0)){ //left mouse button released
                     action.buttonReleased();//execute raycats object's button released method
                 }
-            } else if (hit.collider.gameObject.name.Equals("ResearchGame")){
+            }else if (hit.collider.TryGetComponent<FuelLever>(out var newVar)){ //if raycast object is a GameObject with the Console script : continue
+                newVar.OnLook();
+                if (Input.GetMouseButtonDown(0)){ //left mouse button pressed
+                        newVar.buttonPressed(); //execute raycast object's buttonPressed method
+                } else if (Input.GetMouseButtonUp(0)){ //left mouse button released
+                    newVar.buttonReleased();//execute raycats object's button released method
+                }
+            }else if (hit.collider.gameObject.name.Equals("ResearchGame")){
                 if(Input.GetMouseButton(0)){
                     gameObject.TryGetComponent<PlayerController>(out var player);
                     player.canMove = !player.canMove;
                 }
             }
+            
             
         }
     }
