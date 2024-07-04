@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnvironmentHandler : MonoBehaviour
 {
@@ -28,6 +29,7 @@ public class EnvironmentHandler : MonoBehaviour
         
         if(Research >= ResearchGoal){
             Debug.Log("Won");
+            SceneManager.LoadScene("WinCase");
         }
        
     }
@@ -47,6 +49,7 @@ public class EnvironmentHandler : MonoBehaviour
                 Altitude -= 50 * Time.deltaTime * altitudeLossRate;
             }else {
                 Debug.Log("Game is Over");
+                SceneManager.LoadScene("FailCase");
                 Flag = 0;
             }
         }
