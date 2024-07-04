@@ -79,6 +79,10 @@ public class ResearchGame : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        ActualGame();
+    }
+
+    void ActualGame(){
         leftControl = Input.GetKey(KeyCode.LeftArrow); // Left control currently set to keyboard input (left arrow)
         rightControl = Input.GetKey(KeyCode.RightArrow); // Right control currently set to keyboard input (right arrow)
         shipMoveDirection = 0; // Default direction if no controls are provided
