@@ -10,6 +10,7 @@ using UnityEngine.EventSystems;
 public class Console : MonoBehaviour
 {
     Animator ani;
+    bool triggered = false;
     public void Start(){
         // outline = gameObject.GetComponent<Outline>(); get outline shader on gameobject
         // outline.enabled = false; set the ouline to false
@@ -28,11 +29,19 @@ public void OnLookAway(){
    //Detects if the player clicks object
     public void buttonPressed()
     {
-        ani.SetTrigger("Pushed"); //plays buttonpressed animation
+        triggered = true;
+        if(triggered == true)
+        {
+            ani.SetTrigger("Pushed");
+        } //plays buttonpressed animation
 
     }
 
     public void buttonReleased(){
-        ani.ResetTrigger("Pushed");//resets trigger and stop the button animation
+        triggered = false;
+        if (triggered == false)
+        {
+            ani.SetTrigger("Released");//resets trigger and stop the button animation
+        }
     }
 }
