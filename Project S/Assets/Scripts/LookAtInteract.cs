@@ -16,7 +16,6 @@ public class LookAtInteract : MonoBehaviour
         RaycastHit hit; //initialises variable for raycast data to be stored
         if (Physics.Raycast(ray, out hit, maxRayDistance)) // if object is in raycast : continue
         {
-            Debug.Log(hit.collider.gameObject);
             if (hit.collider.TryGetComponent<Console>(out var action)){ //if raycast object is a GameObject with the Console script : continue
                 action.OnLook();
                 if (Input.GetMouseButtonDown(0)){ //left mouse button pressed

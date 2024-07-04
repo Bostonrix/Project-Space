@@ -23,7 +23,6 @@ public class BlackholeMover : MonoBehaviour
         Environment.TryGetComponent<EnvironmentHandler>(out var env);
         float alt = env.Altitude;
         float newscale = altitudeRealScale * startalt / alt;
-        print(newscale);
         this.transform.localScale = new Vector3(newscale,newscale,0);
     }
 }
