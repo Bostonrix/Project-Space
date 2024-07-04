@@ -16,6 +16,7 @@ public class LookAtInteract : MonoBehaviour
         RaycastHit hit; //initialises variable for raycast data to be stored
         if (Physics.Raycast(ray, out hit, maxRayDistance)) // if object is in raycast : continue
         {
+            Debug.Log(hit.collider.gameObject);
             if (hit.collider.TryGetComponent<Console>(out var action)){ //if raycast object is a GameObject with the Console script : continue
                 action.OnLook();
                 if (Input.GetMouseButtonDown(0)){ //left mouse button pressed
@@ -23,7 +24,13 @@ public class LookAtInteract : MonoBehaviour
                 } else if (Input.GetMouseButtonUp(0)){ //left mouse button released
                     action.buttonReleased();//execute raycats object's button released method
                 }
+            } else if (hit.collider.gameObject.name.Equals("ResearchGame")){
+                if(Input.GetMouseButton(0)){
+                    gameObject.TryGetComponent<PlayerController>(out var player);
+                    player.canMove = !player.canMove;
+                }
             }
+            
         }
     }
 
