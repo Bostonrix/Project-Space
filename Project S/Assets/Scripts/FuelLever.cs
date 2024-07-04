@@ -15,7 +15,7 @@ public class FuelLever : MonoBehaviour
     public void Start(){
         // outline = gameObject.GetComponent<Outline>(); get outline shader on gameobject
         // outline.enabled = false; set the ouline to false
-        ani = gameObject.GetComponent<Animator>();
+        ani = gameObject.GetComponentInParent<Animator>();
     }
 
 
