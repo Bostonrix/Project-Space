@@ -19,6 +19,14 @@ public class EnvironmentHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Invoke("AltitudeHandler", 5);
+       
+    }
+
+
+
+    // Controls altitude decline rate.
+    void AltitudeHandler() {
         if (Flag == 1){
             if (Altitude >= 18000){
             Altitude -= 1;
@@ -34,4 +42,5 @@ public class EnvironmentHandler : MonoBehaviour
             }
         }
     }
+
 }
