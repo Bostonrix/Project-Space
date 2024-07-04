@@ -147,8 +147,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.33323178, y: 3.3687887, z: 0.939141}
-  m_Center: {x: 0.09620716, y: 1.1843944, z: -0.005135298}
+  m_Size: {x: 0.33323178, y: 1.5614201, z: 0.939141}
+  m_Center: {x: 0.09620716, y: 0.28070992, z: -0.005135298}
 --- !u!4 &127683977 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5498792633299451295, guid: c8e96145a5185469bae4e61896877655, type: 3}
@@ -1349,6 +1349,7 @@ MonoBehaviour:
   Altitude: 0
   altitudeLossRate: 1
   Research: 0
+  ResearchGoal: 0
   Fuel: 0
 --- !u!4 &674206088
 Transform:
