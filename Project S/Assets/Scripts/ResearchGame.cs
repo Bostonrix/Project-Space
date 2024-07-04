@@ -65,6 +65,9 @@ public class ResearchGame : MonoBehaviour
     // The score output, starts at zero
 
    public GameObject player;
+   public GameObject Environment;
+
+   public bool flag;
 
 
     // Start is called before the first frame update
@@ -74,14 +77,28 @@ public class ResearchGame : MonoBehaviour
         targetPosition = Random.Range(0f, 2f); // Target begins in random position around circle
         targetTimer = Random.Range(2f,4f); // Target has random time (seconds) before it begins moving
         targetDistance = 1;
+        flag = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+        // get canmove from script
         player.TryGetComponent<PlayerController>(out var component);
         if (component.canMove == false){
         ActualGame();
+        flag = false;
+
+        }else{
+            if (flag == false){
+                // submit research score
+                Environment.TryGetComponent<EnvironmentHandler>(out var newVar);
+                newVar.Research = researchScore;
+
+                // reset score.
+                researchScore = 0;
+                flag = true;
+            }
         }
     }
 
