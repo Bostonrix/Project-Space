@@ -40,7 +40,7 @@ public class EnvironmentHandler : MonoBehaviour
     void AltitudeHandler() {
         if (Flag == 1){
             if (Altitude >= 18000){
-            Altitude -= 1 * Time.deltaTime;
+            Altitude -= 1 * Time.deltaTime *altitudeLossRate;
             } else if (Altitude >= 15000){
                 Altitude -= 5 * Time.deltaTime * altitudeLossRate;
             }else if (Altitude >= 10000){
