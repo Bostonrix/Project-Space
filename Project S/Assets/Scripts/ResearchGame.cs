@@ -64,7 +64,7 @@ public class ResearchGame : MonoBehaviour
     private float researchScore = 0;
     // The score output, starts at zero
 
-   
+   public GameObject player;
 
 
     // Start is called before the first frame update
@@ -79,6 +79,13 @@ public class ResearchGame : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        player.TryGetComponent<PlayerController>(out var component);
+        if (component.canMove == false){
+        ActualGame();
+        }
+    }
+
+    void ActualGame(){
         leftControl = Input.GetKey(KeyCode.LeftArrow); // Left control currently set to keyboard input (left arrow)
         rightControl = Input.GetKey(KeyCode.RightArrow); // Right control currently set to keyboard input (right arrow)
         shipMoveDirection = 0; // Default direction if no controls are provided
