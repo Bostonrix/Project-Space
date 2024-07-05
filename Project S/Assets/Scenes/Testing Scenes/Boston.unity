@@ -369,7 +369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdc7ff9debe6241b3a5379bfcdc7973b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  researchGame: {fileID: 0}
+  env: {fileID: 0}
 --- !u!114 &170433536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2473,6 +2473,7 @@ MonoBehaviour:
   Research: 0
   ResearchGoal: 0
   Fuel: 0
+  criticalDistance: 5000
 --- !u!4 &674206088
 Transform:
   m_ObjectHideFlags: 0
