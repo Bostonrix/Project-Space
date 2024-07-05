@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,20 +11,22 @@ public GameObject env;
 EnvironmentHandler envHand;
 float score;
 float goal;
-Text myText;
+ public TMP_Text myText;
 
     void Start()
     {
         envHand = env.GetComponent<EnvironmentHandler>();
-        goal = envHand.ResearchGoal;
+        
 
     }
 
     // Update is called once per frame
     void Update()
     {   
+        goal = envHand.ResearchGoal;
         score = envHand.Research;
-        myText.text = "Research Collected: " + score + " / " + goal;
+        myText.fontSize = 0.05f;
+        myText.text = "Research Collected: " + score/goal*100 + " %";
         
     }
 }

@@ -21,13 +21,13 @@ public class EnvironmentHandler : MonoBehaviour
         Fuel = 100;
         Flag = 1;
         Research = 0;
-        // ResearchGoal = 10;
+        ResearchGoal = 100;
     }
 
     // Update is called once per frame
     void Update()
     {
-        Invoke("AltitudeHandler", 5);
+        Invoke("AltitudeHandler", 1);
         
         if(Research >= ResearchGoal){
             Debug.Log("Won");

@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 7475089367053089173}
   - component: {fileID: 2988679341506757407}
   - component: {fileID: 4891978779840112176}
-  - component: {fileID: 7737644072735359937}
   m_Layer: 5
   m_Name: Research Score
   m_TagString: Untagged
@@ -96,8 +95,8 @@ MonoBehaviour:
   m_fontSize: 0.05
   m_fontSizeBase: 0.05
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 0
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 1
@@ -135,19 +134,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &7737644072735359937
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1162288946129104849}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdc7ff9debe6241b3a5379bfcdc7973b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  env: {fileID: 0}
 --- !u!1 &1625509441109050092
 GameObject:
   m_ObjectHideFlags: 0
@@ -373,6 +359,7 @@ GameObject:
   - component: {fileID: 3903979277550014919}
   - component: {fileID: 5221728438995515518}
   - component: {fileID: 3806776996681664566}
+  - component: {fileID: 7769319202684078932}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -463,6 +450,20 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &7769319202684078932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1920037127273520708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdc7ff9debe6241b3a5379bfcdc7973b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  env: {fileID: 0}
+  myText: {fileID: 4891978779840112176}
 --- !u!1 &4393475033787417928
 GameObject:
   m_ObjectHideFlags: 0
