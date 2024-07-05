@@ -26,7 +26,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2893112427934219526}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0.07999992}
+  m_LocalPosition: {x: 0, y: 0, z: -0.08}
   m_LocalScale: {x: 0.19005756, y: 0.19005755, z: 0.19005756}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -34,7 +34,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.030000687, y: 1.7700005}
+  m_AnchoredPosition: {x: -0.03, y: 1.131}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &7393158580514399766
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Servers
+  m_text: 'Server
 
 '
   m_isRightToLeft: 0
@@ -201,8 +201,8 @@ Transform:
   m_GameObject: {fileID: 4416738478820073296}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1.5}
-  m_LocalScale: {x: 0.05, y: 4.5, z: 1}
+  m_LocalPosition: {x: -0, y: -0.3, z: 1.34}
+  m_LocalScale: {x: 0.05, y: 3.884805, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8594201513004589183}
@@ -304,7 +304,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4668412033705609115}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: -3.0299988}
+  m_LocalPosition: {x: 0, y: 0, z: -2.856}
   m_LocalScale: {x: 0.19005756, y: 0.19005755, z: 0.19005756}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -312,7 +312,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.030000687, y: 1.7700005}
+  m_AnchoredPosition: {x: -0.03, y: 1.154}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &6669198921531492160
@@ -377,7 +377,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Engines
+  m_text: Engine
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c22e65b6d2c03764bbe17743e5ff97af, type: 2}
   m_sharedMaterial: {fileID: -8324883585633449981, guid: c22e65b6d2c03764bbe17743e5ff97af, type: 2}
@@ -475,7 +475,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.89, y: 9.73, z: -21.137}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.06862, y: 1.06862, z: 1.06862}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1169406100141230662}
@@ -512,8 +512,8 @@ Transform:
   m_GameObject: {fileID: 8023354110935934584}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1.5}
-  m_LocalScale: {x: 0.05, y: 4.5, z: 1}
+  m_LocalPosition: {x: 0, y: -0.3, z: -1.326}
+  m_LocalScale: {x: 0.05, y: 3.884805, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8594201513004589183}
