@@ -9,11 +9,24 @@ public class FuelLever : MonoBehaviour
 {
     Animator ani;
     bool triggered = false;
+    public GameObject Environment;
+
+
     public void Start(){
         // outline = gameObject.GetComponent<Outline>(); get outline shader on gameobject
         // outline.enabled = false; set the ouline to false
         ani = gameObject.GetComponentInParent<Animator>();
     }
+
+
+    void Update(){
+        if(triggered == true){
+            Environment.TryGetComponent<EnvironmentHandler>(out var newVar);
+            newVar.Altitude += 20 * Time.deltaTime;
+        }
+    }
+
+
    //detects if the player looks at object
     public void OnLook(){
 
