@@ -39,11 +39,11 @@ public class AltitudeText : MonoBehaviour
         researchGoal = handler.ResearchGoal;  
         updateValues();
         distToCrit.text = "Distance to Critical: " + distToCritical.ToString("F0") + "Km";
-        distToCrit.fontSize = 4;
+        // distToCrit.fontSize = 4;
         if(distToCritical  < 50000) { distSlider.fillRect.gameObject.GetComponent<Image>().color =  Color.red;}
         distSlider.value = altitude;
         research.text = "Research Completed: " + researchScore.ToString("F0") + "%";
-        research.fontSize = 4;
+        // research.fontSize = 4;
         researchSlider.value = researchScore;
        
 
