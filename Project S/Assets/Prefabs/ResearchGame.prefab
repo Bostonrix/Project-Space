@@ -991,6 +991,7 @@ MonoBehaviour:
   target: {fileID: 51736420971175567}
   leftControl: 0
   rightControl: 0
+  shipDistance: 3
   player: {fileID: 0}
   Environment: {fileID: 0}
   flag: 0
