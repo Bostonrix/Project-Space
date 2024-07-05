@@ -28,7 +28,7 @@ public class LookAtInteract : MonoBehaviour
                 if (Input.GetMouseButtonDown(0)){ //left mouse button pressed
                         newVar.buttonPressed(); //execute raycast object's buttonPressed method
                 } else if (Input.GetMouseButtonUp(0)){ //left mouse button released
-                    newVar.buttonReleased();//execute raycats object's button released method
+                    // newVar.buttonReleased();//execute raycats object's button released method
                 }
             }else if (hit.collider.gameObject.name.Equals("ResearchGame")){
                 if(Input.GetMouseButton(0)){

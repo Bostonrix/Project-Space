@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class AltitudeText : MonoBehaviour
 {
 
-    public TextMesh distToCrit;
-    public TextMesh research;
+    public TMP_Text distToCrit;
+    public TMP_Text research;
     public GameObject env;
     EnvironmentHandler handler;
 
@@ -28,7 +29,7 @@ public class AltitudeText : MonoBehaviour
     void Update()
     {
         updateValues();
-        distToCrit.text = "Distance to Critical: " ;
+        distToCrit.text = "Distance to Critical: " + distToCritical.ToString() ;
     }
 
     void updateValues(){
