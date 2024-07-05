@@ -12,7 +12,7 @@ public class ResearchGame : MonoBehaviour
 
 
     // Parameters
-    private int shipDistance = 3;
+    public int shipDistance = 3;
 
     // Note:  1 PI-radian = 180 Degrees
 
@@ -88,12 +88,11 @@ public class ResearchGame : MonoBehaviour
         if (component.canMove == false){
         ActualGame();
         flag = false;
-
+        Environment.TryGetComponent<EnvironmentHandler>(out var newVar);
+        newVar.Research = researchScore;
         }else{
             if (flag == false){
                 // submit research score
-                Environment.TryGetComponent<EnvironmentHandler>(out var newVar);
-                newVar.Research = researchScore;
 
                 // reset score.
                 flag = true;
