@@ -11,6 +11,7 @@ public class EnvironmentHandler : MonoBehaviour
     public float ResearchGoal;
     public int Fuel;
     private int Flag;
+    public float criticalDistance = 5000;
 
     // Start is called before the first frame update
     void Start()
@@ -45,7 +46,7 @@ public class EnvironmentHandler : MonoBehaviour
                 Altitude -= 5 * Time.deltaTime * altitudeLossRate;
             }else if (Altitude >= 10000){
                     Altitude -= 20 * Time.deltaTime * altitudeLossRate;
-            }else if (Altitude >= 5000){
+            }else if (Altitude >= criticalDistance){
                 Altitude -= 50 * Time.deltaTime * altitudeLossRate;
             }else {
                 Debug.Log("Game is Over");
