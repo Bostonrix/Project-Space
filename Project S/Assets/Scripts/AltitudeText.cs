@@ -29,7 +29,8 @@ public class AltitudeText : MonoBehaviour
     void Update()
     {
         updateValues();
-        distToCrit.text = "Distance to Critical: " + distToCritical.ToString() ;
+        distToCrit.text = "Distance to Critical: " + distToCritical.ToString("F0");
+        distToCrit.fontSize = 5;
     }
 
     void updateValues(){
