@@ -6,21 +6,22 @@ using UnityEngine.SceneManagement;
 public class EnvironmentHandler : MonoBehaviour
 {
     public float Altitude;
-    public float altitudeLossRate = 1; //variable to dynamically change altitude drop rate
-    public float Research;
-    public float ResearchGoal;
+    public float altitudeLossRate = 100; //variable to dynamically change altitude drop rate
+    public float Research = 0;
+    public float ResearchGoal = 100;
     public int Fuel;
     private int Flag;
     public float criticalDistance = 5000;
+    public float safeAltitude;
 
     // Start is called before the first frame update
     void Start()
     {
-        Altitude = 20000;
+        Altitude = 60000;
         Fuel = 100;
         Flag = 1;
-        Research = 0f;
-        ResearchGoal = 10f;
+        Research = 0;
+        // ResearchGoal = 10;
     }
 
     // Update is called once per frame
