@@ -1,21 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class scoreDisplay : MonoBehaviour
 {
 
-public GameObject researchGame;
-private float score;
+public GameObject env;
+EnvironmentHandler envHand;
+float score;
+float goal;
+Text myText;
+
     void Start()
     {
-        
+        envHand = env.GetComponent<EnvironmentHandler>();
+        goal = envHand.ResearchGoal;
+
     }
 
     // Update is called once per frame
     void Update()
-    {
-        researchGame.TryGetComponent<ResearchGame>(out var scoreHolder);
-        score = scoreHolder.getScore();
+    {   
+        score = envHand.Research;
+        myText.text = "Research Collected: " + score + " / " + goal;
+        
     }
 }

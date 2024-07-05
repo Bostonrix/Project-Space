@@ -40,19 +40,22 @@ public void OnLookAway(){
    //Detects if the player clicks object
     public void buttonPressed()
     {
-        triggered = true;
+        triggered = !triggered;
         if(triggered == true)
         {
-            ani.SetTrigger("Pushed");
-        } //plays buttonpressed animation
-
-    }
-
-    public void buttonReleased(){
-        triggered = false;
-        if (triggered == false)
+            ani.SetTrigger("Pushed");//plays buttonpressed animation
+        } else if (triggered == false)
         {
             ani.SetTrigger("Released");//resets trigger and stop the button animation
         }
+
     }
+
+    // public void buttonReleased(){
+    //     triggered = false;
+    //     if (triggered == false)
+    //     {
+    //         ani.SetTrigger("Released");//resets trigger and stop the button animation
+    //     }
+    // }
 }
