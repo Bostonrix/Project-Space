@@ -10,6 +10,7 @@ public class AltitudeText : MonoBehaviour
 {
 
     public TMP_Text distToCrit;
+    public TMP_Text altitudeText;
     public TMP_Text research;
     public GameObject env;
     public Slider researchSlider;
@@ -39,12 +40,11 @@ public class AltitudeText : MonoBehaviour
         researchGoal = handler.ResearchGoal;  
         updateValues();
         distToCrit.text = "Distance to Critical: " + distToCritical.ToString("F0") + "Km";
-        // distToCrit.fontSize = 4;
         if(distToCritical  < 50000) { distSlider.fillRect.gameObject.GetComponent<Image>().color =  Color.red;}
-        distSlider.value = altitude;
+        distSlider.value = distToCritical;
         research.text = "Research Completed: " + researchScore.ToString("F0") + "%";
-        // research.fontSize = 4;
         researchSlider.value = researchScore;
+        altitudeText.text = "Altitude: " + altitude.ToString("F0");
        
 
     }
