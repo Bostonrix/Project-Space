@@ -7,6 +7,7 @@ public class SafeAltitudeHandler : MonoBehaviour
 
     // public GameObject environment;
     private EnvironmentHandler environmentHandler;
+    public Transform researchPanel;
 
 
     // Start is called before the first frame update
@@ -15,6 +16,7 @@ public class SafeAltitudeHandler : MonoBehaviour
 
         // environmentHandler = environment.GetComponent<EnvironmentHandler>();
         environmentHandler = GameObject.FindAnyObjectByType<EnvironmentHandler>();
+        researchPanel = transform.Find("ResearchPanel");
 
         
     }
@@ -22,10 +24,10 @@ public class SafeAltitudeHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-         if (environmentHandler.Altitude < environmentHandler.safeAltitudeMax && environmentHandler.Altitude > environmentHandler.safeAltitudeMin){
-            gameObject.SetActive(true);
+         if (environmentHandler.Altitude <= environmentHandler.safeAltitudeMax && environmentHandler.Altitude >= environmentHandler.safeAltitudeMin){
+             researchPanel.gameObject.SetActive(true);
          } else {
-            gameObject.SetActive(false);
+            researchPanel.gameObject.SetActive(false);
          }
     }
 }
