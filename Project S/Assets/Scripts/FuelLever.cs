@@ -43,10 +43,12 @@ public void OnLookAway(){
         triggered = !triggered;
         if(triggered == true)
         {
-            ani.SetTrigger("Pushed");//plays buttonpressed animation
+            ani.SetTrigger("Pushed");//activates Pushed trigger
+            ani.ResetTrigger("Released"); // resets Released trigger
         } else if (triggered == false)
         {
-            ani.SetTrigger("Released");//resets trigger and stop the button animation
+            ani.SetTrigger("Released");// activates Released trigger
+            ani.ResetTrigger("Pushed");// resets Pushed trigger
         }
 
     }
