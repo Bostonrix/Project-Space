@@ -73,7 +73,9 @@ public class EnvironmentHandler : MonoBehaviour
     public void hazardCleared(){
         inDisarray = false;
         FindFirstObjectByType<FuelLever>().active = true;
+        if (researchPanel.gameObject){
         researchPanel.gameObject.SetActive(true);
+        }
     }
 
 }

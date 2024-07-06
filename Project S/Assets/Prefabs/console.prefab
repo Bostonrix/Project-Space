@@ -1652,12 +1652,13 @@ MonoBehaviour:
   distToCrit: {fileID: 3199443351021674953}
   altitudeText: {fileID: 4312895008733290725}
   research: {fileID: 843252033457272286}
-  errorPlace: {fileID: 0}
+  errorPlace: {fileID: 1741777949217084609}
   env: {fileID: 0}
   hazardState: {fileID: 2796149141866227351}
   safeState: {fileID: 7622243728482498264}
   researchSlider: {fileID: 5831867830088223645}
   distSlider: {fileID: 8754474327786394076}
+  errorRoom: 
 --- !u!1 &8255719483784147862
 GameObject:
   m_ObjectHideFlags: 0
@@ -2036,6 +2037,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 5c5425e603518d9469375191f2898d16, type: 3}
       propertyPath: m_Name
       value: console
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5c5425e603518d9469375191f2898d16, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -2080,6 +2080,17 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!114 &896145911 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8745192331350227888, guid: c8e96145a5185469bae4e61896877655, type: 3}
+  m_PrefabInstance: {fileID: 8130713011207725662}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e2891b13ddcb944699350120d7486b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &900004451
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4763,9 +4774,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6313859363887570266, guid: 796bac2511d89774a9b66a505e149fbb, type: 3}
+      propertyPath: researchPanel
+      value: 
+      objectReference: {fileID: 896145911}
     - target: {fileID: 7017445932852961960, guid: 796bac2511d89774a9b66a505e149fbb, type: 3}
       propertyPath: m_Name
       value: Environment
+      objectReference: {fileID: 0}
+    - target: {fileID: 7120087143917928752, guid: 796bac2511d89774a9b66a505e149fbb, type: 3}
+      propertyPath: setTimebetweenHazards
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5000,6 +5019,10 @@ PrefabInstance:
       propertyPath: env
       value: 
       objectReference: {fileID: 674206086}
+    - target: {fileID: 8259438572270064876, guid: c8e96145a5185469bae4e61896877655, type: 3}
+      propertyPath: m_Name
+      value: RPanelContainer
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7737644072735359937, guid: c8e96145a5185469bae4e61896877655, type: 3}
     m_RemovedGameObjects: []
