@@ -14,6 +14,8 @@ public class EnvironmentHandler : MonoBehaviour
     public float criticalDistance = 5000;
     public float safeAltitudeMin;
     public float safeAltitudeMax;
+    public bool inDisarray;
+    SafeAltitudeHandler researchPanel;
 
     // Start is called before the first frame update
     void Start()
@@ -58,6 +60,19 @@ public class EnvironmentHandler : MonoBehaviour
                 Flag = 0;
             }
         }
+    }
+
+    //a function to handle when a hazard has come up
+    public void disarray(){
+        inDisarray = true;
+        FindFirstObjectByType<FuelLever>().active = false;
+        researchPanel.gameObject.SetActive(false);
+    }
+
+    public void hazardCleared(){
+        inDisarray = false;
+        FindFirstObjectByType<FuelLever>().active = true;
+        researchPanel.gameObject.SetActive(true);
     }
 
 }

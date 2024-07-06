@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -21,6 +22,7 @@ public class AltitudeText : MonoBehaviour
     float researchGoal;
     float altitude;
     float distToCritical;
+    bool inHazard;
 
 
 
@@ -37,6 +39,23 @@ public class AltitudeText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        inHazard = handler.inDisarray;
+        if (inHazard == false){
+            safeSceen();
+        } else {
+
+        }
+
+    }
+
+    void updateValues(){
+        researchScore = handler.Research / researchGoal * 100;
+        altitude = handler.Altitude;
+        distToCritical = altitude - handler.criticalDistance;
+    }
+
+    void safeSceen() {
+        transform.Find("SafeState").gameObject.SetActive = true;
         researchGoal = handler.ResearchGoal;  
         updateValues();
         distToCrit.text = "Distance to Critical: " + distToCritical.ToString("F0") + "Km";
@@ -45,13 +64,9 @@ public class AltitudeText : MonoBehaviour
         research.text = "Research Completed: " + researchScore.ToString("F0") + "%";
         researchSlider.value = researchScore;
         altitudeText.text = "Altitude: " + altitude.ToString("F0") + "Km";
-       
-
     }
 
-    void updateValues(){
-        researchScore = handler.Research / researchGoal * 100;
-        altitude = handler.Altitude;
-        distToCritical = altitude - handler.criticalDistance;
+    void hazardScreen(){
+
     }
 }
