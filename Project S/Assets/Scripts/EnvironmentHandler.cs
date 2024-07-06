@@ -19,13 +19,13 @@ public class EnvironmentHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Altitude = 60000;
+        Altitude = 55000;
         Fuel = 100;
         Flag = 1;
         Research = 0;
         ResearchGoal = 100;
-        safeAltitudeMin = 40000;
-        safeAltitudeMax = 50000;
+        safeAltitudeMin = 45000;
+        safeAltitudeMax = 55000;
         inDisarray = false;
     }
 
@@ -65,10 +65,14 @@ public class EnvironmentHandler : MonoBehaviour
     //a function to handle when a hazard has come up
     public void disarray(){
         print("DISARRAY!");
+        FindFirstObjectByType<FuelLever>().active = false;
+        FindAnyObjectByType<SafeAltitudeHandler>().transform.gameObject.SetActive(false);
     }
 
     public void hazardCleared(){
         print("Hazard Cleared - Environment");
+        FindFirstObjectByType<FuelLever>().active = true;
+        FindAnyObjectByType<SafeAltitudeHandler>().transform.gameObject.SetActive(true);
     }
 
 }

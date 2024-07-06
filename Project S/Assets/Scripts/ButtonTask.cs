@@ -8,20 +8,32 @@ public class ButtonTask : MonoBehaviour
     public bool isComplete;
     public bool hazard;
 
+    public Animator ani;
+
     // Start is called before the first frame update
     void Start()
     {
         isComplete = true;
         hazard = false;
+        ani = gameObject.GetComponentInParent<Animator>();
 
     }
 
     // Update is called once per frame
 
     public void onPress(){
-        isComplete = true;
-        hazard = false;
-        FindAnyObjectByType<HazardHandler>().hazardCleared();
+        if (isComplete == false){
+            isComplete = true;
+            hazard = false;
+            FindAnyObjectByType<HazardHandler>().hazardCleared();
+        }
+        ani.SetTrigger("Pushed");
+        ani.ResetTrigger("Released");
+    } 
+
+    public void onRelease(){
+        ani.SetTrigger("Released");
+        ani.ResetTrigger("Pushed");
     }
 
     public void startTask(){

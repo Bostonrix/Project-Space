@@ -9,6 +9,7 @@ public class FuelLever : MonoBehaviour
 {
     Animator ani;
     bool triggered = false;
+    public bool active = true;
     public GameObject Environment;
 
 
@@ -40,17 +41,18 @@ public void OnLookAway(){
    //Detects if the player clicks object
     public void buttonPressed()
     {
-        triggered = !triggered;
-        if(triggered == true)
-        {
-            ani.SetTrigger("Pushed");//activates Pushed trigger
-            ani.ResetTrigger("Released"); // resets Released trigger
-        } else if (triggered == false)
-        {
-            ani.SetTrigger("Released");// activates Released trigger
-            ani.ResetTrigger("Pushed");// resets Pushed trigger
+        if (active == true){
+            triggered = !triggered;
+            if(triggered == true)
+            {
+                ani.SetTrigger("Pushed");//activates Pushed trigger
+                ani.ResetTrigger("Released"); // resets Released trigger
+            } else if (triggered == false)
+            {
+                ani.SetTrigger("Released");// activates Released trigger
+                ani.ResetTrigger("Pushed");// resets Pushed trigger
+            }
         }
-
     }
 
     // public void buttonReleased(){
