@@ -33,6 +33,7 @@ public class HazardHandler : MonoBehaviour
     }
 
     void beginHazard (){
+        FindAnyObjectByType<PlayerController>().canMove = true;
         activeHazard = true;
         ButtonTask current = buttonTasks[Random.Range(0,buttonTasks.Length-1)]; // randomly selects detected task buttons
         current.startTask(); //starts task on selected 

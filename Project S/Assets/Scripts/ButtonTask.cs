@@ -9,6 +9,7 @@ public class ButtonTask : MonoBehaviour
     public bool hazard;
 
     public Animator ani;
+    public GameObject parent;
 
     // Start is called before the first frame update
     void Start()
@@ -39,6 +40,6 @@ public class ButtonTask : MonoBehaviour
     public void startTask(){
         hazard = true;
         isComplete = false;
-        print("Hazard Started - Button Task: " + gameObject.GetComponentInParent<Transform>().parent.name);
+        print("Hazard Started - Button Task: " + gameObject.GetComponentInParent<Transform>().parent.parent.name);
     }
 }

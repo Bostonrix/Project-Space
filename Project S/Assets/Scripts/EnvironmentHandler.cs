@@ -15,6 +15,7 @@ public class EnvironmentHandler : MonoBehaviour
     public float safeAltitudeMin;
     public float safeAltitudeMax;
     private bool inDisarray;
+    SafeAltitudeHandler researchPanel;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +28,7 @@ public class EnvironmentHandler : MonoBehaviour
         safeAltitudeMin = 45000;
         safeAltitudeMax = 55000;
         inDisarray = false;
+        researchPanel = FindAnyObjectByType<SafeAltitudeHandler>();
     }
 
     // Update is called once per frame
@@ -66,13 +68,13 @@ public class EnvironmentHandler : MonoBehaviour
     public void disarray(){
         print("DISARRAY!");
         FindFirstObjectByType<FuelLever>().active = false;
-        FindAnyObjectByType<SafeAltitudeHandler>().transform.gameObject.SetActive(false);
+        researchPanel.gameObject.SetActive(false);
     }
 
     public void hazardCleared(){
         print("Hazard Cleared - Environment");
         FindFirstObjectByType<FuelLever>().active = true;
-        FindAnyObjectByType<SafeAltitudeHandler>().transform.gameObject.SetActive(true);
+        researchPanel.gameObject.SetActive(true);
     }
 
 }
