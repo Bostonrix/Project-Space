@@ -44,7 +44,7 @@ public class AltitudeText : MonoBehaviour
         distSlider.value = distToCritical;
         research.text = "Research Completed: " + researchScore.ToString("F0") + "%";
         researchSlider.value = researchScore;
-        altitudeText.text = "Altitude: " + altitude.ToString("F0");
+        altitudeText.text = "Altitude: " + altitude.ToString("F0") + "Km";
        
 
     }

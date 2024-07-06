@@ -12,7 +12,8 @@ public class EnvironmentHandler : MonoBehaviour
     public int Fuel;
     private int Flag;
     public float criticalDistance = 5000;
-    public float safeAltitude;
+    public float safeAltitudeMin;
+    public float safeAltitudeMax;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +23,8 @@ public class EnvironmentHandler : MonoBehaviour
         Flag = 1;
         Research = 0;
         ResearchGoal = 100;
+        safeAltitudeMin = 40000;
+        safeAltitudeMax = 50000;
     }
 
     // Update is called once per frame

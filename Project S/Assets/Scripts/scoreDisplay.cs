@@ -12,6 +12,7 @@ EnvironmentHandler envHand;
 float score;
 float goal;
  public TMP_Text myText;
+ public TMP_Text safeAltitude;
 
     void Start()
     {
@@ -27,6 +28,7 @@ float goal;
         score = envHand.Research;
         myText.fontSize = 0.05f;
         myText.text = "Research Collected: " + score/goal*100 + " %";
+        safeAltitude.text = "Altitude range where research is possible: " + envHand.safeAltitudeMax.ToString("F0") + "Km to " + envHand.safeAltitudeMin.ToString("F0") + "Km";
         
     }
 }
