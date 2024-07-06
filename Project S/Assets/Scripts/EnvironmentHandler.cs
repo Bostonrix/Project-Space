@@ -14,6 +14,7 @@ public class EnvironmentHandler : MonoBehaviour
     public float criticalDistance = 5000;
     public float safeAltitudeMin;
     public float safeAltitudeMax;
+    private bool inDisarray;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +26,7 @@ public class EnvironmentHandler : MonoBehaviour
         ResearchGoal = 100;
         safeAltitudeMin = 40000;
         safeAltitudeMax = 50000;
+        inDisarray = false;
     }
 
     // Update is called once per frame
@@ -58,6 +60,15 @@ public class EnvironmentHandler : MonoBehaviour
                 Flag = 0;
             }
         }
+    }
+
+    //a function to handle when a hazard has come up
+    public void disarray(){
+        print("DISARRAY!");
+    }
+
+    public void hazardCleared(){
+        print("Hazard Cleared - Environment");
     }
 
 }

@@ -23,10 +23,10 @@ public class LookAtInteract : MonoBehaviour
                 } else if (Input.GetMouseButtonUp(0)){ //left mouse button released
                     action.buttonReleased();//execute raycats object's button released method
                 }
-            }else if (hit.collider.TryGetComponent<FuelLever>(out var newVar)){ //if raycast object is a GameObject with the Console script : continue
-                newVar.OnLook();
+            }else if (hit.collider.TryGetComponent<FuelLever>(out var leverVar)){ //if raycast object is a GameObject with the FuelLever script : continue
+                leverVar.OnLook();
                 if (Input.GetMouseButtonDown(0)){ //left mouse button pressed
-                        newVar.buttonPressed(); //execute raycast object's buttonPressed method
+                        leverVar.buttonPressed(); //execute raycast object's buttonPressed method
                 } else if (Input.GetMouseButtonUp(0)){ //left mouse button released
                     // newVar.buttonReleased();//execute raycats object's button released method
                 }
@@ -34,6 +34,10 @@ public class LookAtInteract : MonoBehaviour
                 if(Input.GetMouseButton(0)){
                     gameObject.TryGetComponent<PlayerController>(out var player);
                     player.canMove = !player.canMove;
+                }
+            }else if (hit.collider.TryGetComponent<ButtonTask>(out var newVar)){ //if raycast object is a GameObject with the Buttontask script : continue
+                if (Input.GetMouseButtonDown(0) && newVar.isComplete != true){ //left mouse button pressed
+                        newVar.onPress(); //execute raycast object's onPress method
                 }
             }
             
