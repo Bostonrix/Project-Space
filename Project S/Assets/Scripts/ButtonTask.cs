@@ -30,6 +30,7 @@ public class ButtonTask : MonoBehaviour
         }
         ani.SetTrigger("Pushed");
         ani.ResetTrigger("Released");
+        Invoke("onRelease", 1);
     } 
 
     public void onRelease(){

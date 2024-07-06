@@ -38,8 +38,6 @@ public class LookAtInteract : MonoBehaviour
             }else if (hit.collider.TryGetComponent<ButtonTask>(out var newVar)){ //if raycast object is a GameObject with the Buttontask script : continue
                 if (Input.GetMouseButtonDown(0)){ //left mouse button pressed
                         newVar.onPress(); //execute raycast object's onPress method
-                } else if (Input.GetMouseButtonUp(0)){
-                    newVar.onRelease();
                 }
             }
             
