@@ -26,7 +26,8 @@ public class EnvironmentHandler : MonoBehaviour
         Research = 0;
         ResearchGoal = 100;
         safeAltitudeMin = 40000;
-        safeAltitudeMax = 50000;
+        safeAltitudeMax = 65000;
+        altitudeLossRate = 30;
 
     }
 
