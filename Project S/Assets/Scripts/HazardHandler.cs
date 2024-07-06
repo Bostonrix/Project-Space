@@ -8,6 +8,7 @@ public class HazardHandler : MonoBehaviour
     bool activeHazard;
     public float timebetweenHazards;
     ButtonTask[] buttonTasks;
+    ButtonTask current;
     void Start()
     {
         buttonTasks = FindObjectsOfType<ButtonTask>(); //finds all 
@@ -35,8 +36,12 @@ public class HazardHandler : MonoBehaviour
     void beginHazard (){
         FindAnyObjectByType<PlayerController>().canMove = true;
         activeHazard = true;
-        ButtonTask current = buttonTasks[Random.Range(0,buttonTasks.Length-1)]; // randomly selects detected task buttons
+        current = buttonTasks[Random.Range(0,buttonTasks.Length-1)]; // randomly selects detected task buttons
         current.startTask(); //starts task on selected 
         GetComponentInParent<EnvironmentHandler>().disarray(); //sends environment into Disarray
+    }
+
+    public ButtonTask getCurrent(){
+        return current;
     }
 }

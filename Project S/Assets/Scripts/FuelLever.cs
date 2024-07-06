@@ -54,12 +54,4 @@ public void OnLookAway(){
             }
         }
     }
-
-    // public void buttonReleased(){
-    //     triggered = false;
-    //     if (triggered == false)
-    //     {
-    //         ani.SetTrigger("Released");//resets trigger and stop the button animation
-    //     }
-    // }
 }

@@ -13,16 +13,23 @@ public class AltitudeText : MonoBehaviour
     public TMP_Text distToCrit;
     public TMP_Text altitudeText;
     public TMP_Text research;
+    public TMP_Text errorPlace;
     public GameObject env;
+    public GameObject hazardState;
+    public GameObject safeState;
     public Slider researchSlider;
     public Slider distSlider;
+
+    
     EnvironmentHandler handler;
+    HazardHandler hazardHandler;
 
     float researchScore;
     float researchGoal;
     float altitude;
     float distToCritical;
     bool inHazard;
+    public string errorRoom;
 
 
 
@@ -31,9 +38,9 @@ public class AltitudeText : MonoBehaviour
     {   
 
         handler = env.GetComponent<EnvironmentHandler>();
+        hazardHandler = env.GetComponent<HazardHandler>();
         distSlider.minValue = handler.criticalDistance;
-        distSlider.maxValue = 60000
-        ;
+        distSlider.maxValue = 60000;
     }
 
     // Update is called once per frame
@@ -43,7 +50,7 @@ public class AltitudeText : MonoBehaviour
         if (inHazard == false){
             safeSceen();
         } else {
-
+            Invoke ("hazardScreen", 1);
         }
 
     }
@@ -55,7 +62,8 @@ public class AltitudeText : MonoBehaviour
     }
 
     void safeSceen() {
-        transform.Find("SafeState").gameObject.SetActive = true;
+        safeState.SetActive(true);
+        hazardState.SetActive(false);
         researchGoal = handler.ResearchGoal;  
         updateValues();
         distToCrit.text = "Distance to Critical: " + distToCritical.ToString("F0") + "Km";
@@ -67,6 +75,9 @@ public class AltitudeText : MonoBehaviour
     }
 
     void hazardScreen(){
+        safeState.SetActive(false);
+        hazardState.SetActive(true);
+        errorPlace.text = "Error detected in: " + errorRoom;
 
     }
 }

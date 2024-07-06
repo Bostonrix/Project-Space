@@ -15,7 +15,7 @@ public class EnvironmentHandler : MonoBehaviour
     public float safeAltitudeMin;
     public float safeAltitudeMax;
     public bool inDisarray;
-    SafeAltitudeHandler researchPanel;
+    public SafeAltitudeHandler researchPanel;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +27,7 @@ public class EnvironmentHandler : MonoBehaviour
         ResearchGoal = 100;
         safeAltitudeMin = 40000;
         safeAltitudeMax = 50000;
+
     }
 
     // Update is called once per frame

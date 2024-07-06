@@ -40,6 +40,7 @@ public class ButtonTask : MonoBehaviour
     public void startTask(){
         hazard = true;
         isComplete = false;
+        FindAnyObjectByType<AltitudeText>().errorRoom = gameObject.GetComponentInParent<Transform>().parent.parent.name;
         print("Hazard Started - Button Task: " + gameObject.GetComponentInParent<Transform>().parent.parent.name);
     }
 }
