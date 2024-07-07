@@ -92,7 +92,6 @@ public class ResearchGame : MonoBehaviour
         newVar.Research = researchScore;
         }else{
             if (flag == false){
-                // submit research score
 
                 // reset score.
                 flag = true;

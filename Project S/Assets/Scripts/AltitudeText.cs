@@ -39,31 +39,31 @@ public class AltitudeText : MonoBehaviour
 
         handler = env.GetComponent<EnvironmentHandler>();
         hazardHandler = env.GetComponent<HazardHandler>();
-        distSlider.minValue = handler.criticalDistance;
-        distSlider.maxValue = 60000;
+        distSlider.minValue = 0; // sets slider min for the Distance to critical bar to 0 
+        distSlider.maxValue = distToCritical = handler.Altitude - handler.criticalDistance; // sets slider min for the Distance to critical bar to teh max distance until critical distance
     }
 
     // Update is called once per frame
     void Update()
     {
-        inHazard = handler.inDisarray;
-        if (inHazard == false){
+        inHazard = handler.inDisarray; // check to see if the game is in a hazard state
+        if (inHazard == false){ // if not in hazard state : control panel displays normal screen
             safeSceen();
-        } else {
-            Invoke ("hazardScreen", 1);
+        } else { // if in hazard state : display Error screen after 1 second
+            Invoke ("hazardScreen", 1); //delay allows the hazard screen to get passed the error location
         }
 
     }
 
     void updateValues(){
-        researchScore = handler.Research / researchGoal * 100;
+        researchScore = handler.Research / researchGoal * 100; // converts research score to a percentage
         altitude = handler.Altitude;
         distToCritical = altitude - handler.criticalDistance;
     }
 
     void safeSceen() {
-        safeState.SetActive(true);
-        hazardState.SetActive(false);
+        safeState.SetActive(true); // shows the normal control panel screen
+        hazardState.SetActive(false); // hides the Error screen
         researchGoal = handler.ResearchGoal;  
         updateValues();
         distToCrit.text = "Distance to Critical: " + distToCritical.ToString("F0") + "Km";
@@ -75,8 +75,8 @@ public class AltitudeText : MonoBehaviour
     }
 
     void hazardScreen(){
-        safeState.SetActive(false);
-        hazardState.SetActive(true);
+        safeState.SetActive(false); // hides the normal control panel screen
+        hazardState.SetActive(true); // shows the error screen
         errorPlace.text = "Error detected in: " + errorRoom;
 
     }
