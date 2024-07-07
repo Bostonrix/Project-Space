@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SafeAltitudeHandler : MonoBehaviour
 {
-
+    //class hides and shows research panel base on the altitude of the ship
     // public GameObject environment;
     private EnvironmentHandler environmentHandler;
     public Transform researchPanel;

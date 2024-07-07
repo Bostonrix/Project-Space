@@ -7,6 +7,8 @@ using UnityEngine.UI;
 public class scoreDisplay : MonoBehaviour
 {
 
+    //class displays research score on researchpanel
+
 public GameObject env;
 EnvironmentHandler envHand;
 float score;
@@ -24,6 +26,7 @@ float goal;
     // Update is called once per frame
     void Update()
     {   
+
         goal = envHand.ResearchGoal;
         score = envHand.Research;
         myText.fontSize = 0.05f;
