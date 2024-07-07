@@ -22,26 +22,26 @@ public class ButtonTask : MonoBehaviour
 
     // Update is called once per frame
 
-    public void onPress(){
-        if (isComplete == false){
+    public void onPress(){ //executes when a button is clicked on by the player
+        if (isComplete == false){ //if task is incomplete : mark complete, mark no hazard, execute the hazardhandlers hazard cleared method
             isComplete = true;
             hazard = false;
             FindAnyObjectByType<HazardHandler>().hazardCleared();
         }
-        ani.SetTrigger("Pushed");
-        ani.ResetTrigger("Released");
-        Invoke("onRelease", 0.5f);
+        ani.SetTrigger("Pushed"); // play button animation
+        ani.ResetTrigger("Released"); //^
+        Invoke("onRelease", 0.5f); // delay allows animation to play once only before reseting 
     } 
 
-    public void onRelease(){
+    public void onRelease(){ // resets the animation for the buttons
         ani.SetTrigger("Released");
         ani.ResetTrigger("Pushed");
     }
 
-    public void startTask(){
-        hazard = true;
-        isComplete = false;
+    public void startTask(){ //called when the button is chosen for the current hazard
+        hazard = true; // marks as active hazard
+        isComplete = false; // marks as incomplete
         FindAnyObjectByType<AltitudeText>().errorRoom = gameObject.GetComponentInParent<Transform>().parent.parent.name;
-        print("Hazard Started - Button Task: " + gameObject.GetComponentInParent<Transform>().parent.parent.name);
+        // ^ passes the current hazard room to AltitudeText
     }
 }
