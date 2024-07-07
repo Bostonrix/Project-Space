@@ -198,7 +198,7 @@ public class ResearchGame : MonoBehaviour
             researchScore += researchPointsPerSecond * Time.deltaTime;
             target.GetComponent<Renderer>().material.color = new Color(0,255,255);
 
-        } else {target.GetComponent<Renderer>().material.color = new Color(0,0,255);}
+        } else {target.GetComponent<Renderer>().material.color = new Color(0,255,0);}
     }
 
     public float getScore(){
