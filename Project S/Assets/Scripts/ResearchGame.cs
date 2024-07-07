@@ -196,7 +196,9 @@ public class ResearchGame : MonoBehaviour
         if (closestProximity <= targetSize)
         {
             researchScore += researchPointsPerSecond * Time.deltaTime;
-        }
+            target.GetComponent<Renderer>().material.color = new Color(0,255,255);
+
+        } else {target.GetComponent<Renderer>().material.color = new Color(0,0,255);}
     }
 
     public float getScore(){
