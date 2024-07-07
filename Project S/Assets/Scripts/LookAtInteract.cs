@@ -31,7 +31,7 @@ public class LookAtInteract : MonoBehaviour
                     // newVar.buttonReleased();//execute raycats object's button released method
                 }
             }else if (hit.collider.gameObject.name.Equals("ResearchPanel")){
-                if(Input.GetMouseButton(0)){
+                if(Input.GetMouseButtonDown(0)){
                     gameObject.TryGetComponent<PlayerController>(out var player);
                     player.canMove = !player.canMove;
                 }
