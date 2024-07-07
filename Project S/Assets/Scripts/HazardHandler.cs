@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HazardHandler : MonoBehaviour
 {
-    public float setTimebetweenHazards = 60;
+
     bool activeHazard;
     public float timebetweenHazards;
     ButtonTask[] buttonTasks;
@@ -14,7 +14,7 @@ public class HazardHandler : MonoBehaviour
     void Start()
     {
         buttonTasks = FindObjectsOfType<ButtonTask>(); //finds all 
-        timebetweenHazards = setTimebetweenHazards;
+        timebetweenHazards = Random.Range(10, 30);
         activeHazard = false;
     }
 
@@ -32,7 +32,7 @@ public class HazardHandler : MonoBehaviour
     public void hazardCleared(){
         alarm.Pause();
         activeHazard = false;
-        timebetweenHazards = setTimebetweenHazards;
+        timebetweenHazards = Random.Range(20, 30);
         GetComponentInParent<EnvironmentHandler>().hazardCleared();
     }
 

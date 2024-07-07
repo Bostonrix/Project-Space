@@ -40,7 +40,7 @@ public class AltitudeText : MonoBehaviour
         handler = env.GetComponent<EnvironmentHandler>();
         hazardHandler = env.GetComponent<HazardHandler>();
         distSlider.minValue = 0; // sets slider min for the Distance to critical bar to 0 
-        distSlider.maxValue = distToCritical = handler.Altitude - handler.criticalDistance; // sets slider min for the Distance to critical bar to teh max distance until critical distance
+        distSlider.maxValue = handler.Altitude - handler.criticalDistance + 20000; // sets slider min for the Distance to critical bar to teh max distance until critical distance
     }
 
     // Update is called once per frame
@@ -67,7 +67,7 @@ public class AltitudeText : MonoBehaviour
         researchGoal = handler.ResearchGoal;  
         updateValues();
         distToCrit.text = "Distance to Critical: " + distToCritical.ToString("F0") + "Km";
-        if(distToCritical  < 50000) { distSlider.fillRect.gameObject.GetComponent<Image>().color =  Color.red;}
+        if(distToCritical  < handler.criticalDistance) { distSlider.fillRect.gameObject.GetComponent<Image>().color =  Color.red;}
         distSlider.value = distToCritical;
         research.text = "Research Completed: " + researchScore.ToString("F0") + "%";
         researchSlider.value = researchScore;
@@ -77,7 +77,7 @@ public class AltitudeText : MonoBehaviour
     void hazardScreen(){
         safeState.SetActive(false); // hides the normal control panel screen
         hazardState.SetActive(true); // shows the error screen
-        errorPlace.text = "Error detected in: " + errorRoom + ". Please press the correct button to repair the fault";
+        errorPlace.text = "Error detected! Please press the " + errorRoom + " button to repair the fault";
 
     }
 }
