@@ -36,7 +36,7 @@ public class EnvironmentHandler : MonoBehaviour
     {
         Invoke("AltitudeHandler", 1);
         
-        if(Research >= ResearchGoal){
+        if(Research >= ResearchGoal){ // player reaches the researchGoal : scene changes to win case
             Debug.Log("Won");
             SceneManager.LoadScene("WinCase");
         }
@@ -64,18 +64,18 @@ public class EnvironmentHandler : MonoBehaviour
         }
     }
 
-    //a function to handle when a hazard has come up
-    public void disarray(){
+    
+    public void disarray(){ //called by HazardHandler when a hazard is started
         inDisarray = true;
-        FindFirstObjectByType<FuelLever>().active = false;
-        researchPanel.gameObject.SetActive(false);
+        FindFirstObjectByType<FuelLever>().active = false; // finds the FuelLever and disables it
+        researchPanel.gameObject.SetActive(false); // disables the ResearchPanel
     }
 
-    public void hazardCleared(){
+    public void hazardCleared(){ //called by HazardHandler when a hazard is cleared
         inDisarray = false;
-        FindFirstObjectByType<FuelLever>().active = true;
+        FindFirstObjectByType<FuelLever>().active = true; // finds the FuelLever and activates it
         if (researchPanel.gameObject){
-        researchPanel.gameObject.SetActive(true);
+        researchPanel.gameObject.SetActive(true); // if the game can find the research panel : it activates it
         }
     }
 
