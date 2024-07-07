@@ -10,12 +10,14 @@ public class HazardHandler : MonoBehaviour
     ButtonTask[] buttonTasks;
     ButtonTask current;
     public AudioSource alarm;
+    Light[] lights;
 
     void Start()
     {
         buttonTasks = FindObjectsOfType<ButtonTask>(); //finds all 
         timebetweenHazards = Random.Range(10, 30);
         activeHazard = false;
+        lights = FindObjectsOfType<Light>();
     }
 
     // Update is called once per frame
@@ -34,10 +36,16 @@ public class HazardHandler : MonoBehaviour
         activeHazard = false;
         timebetweenHazards = Random.Range(20, 30);
         GetComponentInParent<EnvironmentHandler>().hazardCleared();
+        foreach (Light light in lights){
+            light.color = new Color(0.9716981f, 0.8019704f, 0.5546013f);
+        }
     }
 
     void beginHazard (){
         alarm.Play();
+        foreach (Light light in lights){
+            light.color = Color.red;
+        }
         FindAnyObjectByType<PlayerController>().canMove = true;
         activeHazard = true;
         current = buttonTasks[Random.Range(0,buttonTasks.Length-1)]; // randomly selects detected task buttons
