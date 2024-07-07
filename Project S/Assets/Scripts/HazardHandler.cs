@@ -9,6 +9,8 @@ public class HazardHandler : MonoBehaviour
     public float timebetweenHazards;
     ButtonTask[] buttonTasks;
     ButtonTask current;
+    public AudioSource alarm;
+
     void Start()
     {
         buttonTasks = FindObjectsOfType<ButtonTask>(); //finds all 
@@ -28,12 +30,14 @@ public class HazardHandler : MonoBehaviour
     }
 
     public void hazardCleared(){
+        alarm.Pause();
         activeHazard = false;
         timebetweenHazards = setTimebetweenHazards;
         GetComponentInParent<EnvironmentHandler>().hazardCleared();
     }
 
     void beginHazard (){
+        alarm.Play();
         FindAnyObjectByType<PlayerController>().canMove = true;
         activeHazard = true;
         current = buttonTasks[Random.Range(0,buttonTasks.Length-1)]; // randomly selects detected task buttons

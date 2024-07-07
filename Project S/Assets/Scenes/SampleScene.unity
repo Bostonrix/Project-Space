@@ -2889,6 +2889,11 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!82 &1480127315 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 5538853700862483881, guid: de0ee320e09641b438b32d779b37de6b, type: 3}
+  m_PrefabInstance: {fileID: 1440199140476343267}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1538648759
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4342,6 +4347,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2694671030520370809, guid: de0ee320e09641b438b32d779b37de6b, type: 3}
+      propertyPath: m_Volume
+      value: 0.435
+      objectReference: {fileID: 0}
     - target: {fileID: 8169739505259746541, guid: de0ee320e09641b438b32d779b37de6b, type: 3}
       propertyPath: m_Name
       value: Audio Sources
@@ -4620,8 +4629,12 @@ PrefabInstance:
       value: Environment
       objectReference: {fileID: 0}
     - target: {fileID: 7120087143917928752, guid: 796bac2511d89774a9b66a505e149fbb, type: 3}
+      propertyPath: alarm
+      value: 
+      objectReference: {fileID: 1480127315}
+    - target: {fileID: 7120087143917928752, guid: 796bac2511d89774a9b66a505e149fbb, type: 3}
       propertyPath: setTimebetweenHazards
-      value: 30
+      value: 5.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
