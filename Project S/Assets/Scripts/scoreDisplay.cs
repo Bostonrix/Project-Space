@@ -30,7 +30,7 @@ float goal;
         goal = envHand.ResearchGoal;
         score = envHand.Research;
         myText.fontSize = 0.05f;
-        myText.text = "Research Collected: " + score/goal*100 + " %";
+        myText.text = "Research Collected: " + (score/goal*100).ToString("F2") + " %";
         safeAltitude.text = "Altitude range where research is possible: " + envHand.safeAltitudeMax.ToString("F0") + "Km to " + envHand.safeAltitudeMin.ToString("F0") + "Km";
         
     }
