@@ -77,7 +77,7 @@ public class AltitudeText : MonoBehaviour
     void hazardScreen(){
         safeState.SetActive(false); // hides the normal control panel screen
         hazardState.SetActive(true); // shows the error screen
-        errorPlace.text = "Error detected in: " + errorRoom;
+        errorPlace.text = "Error detected in: " + errorRoom + ". Please press the correct button to repair the fault";
 
     }
 }

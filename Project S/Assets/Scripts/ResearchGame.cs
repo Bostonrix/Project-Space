@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ResearchGame : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class ResearchGame : MonoBehaviour
     public GameObject target;
     public bool leftControl;
     public bool rightControl;
+    public Image gameActive;
 
 
     // Parameters
@@ -88,11 +90,12 @@ public class ResearchGame : MonoBehaviour
         if (component.canMove == false){
         ActualGame();
         flag = false;
+        gameActive.color = Color.green;
         Environment.TryGetComponent<EnvironmentHandler>(out var newVar);
         newVar.Research = researchScore;
         }else{
             if (flag == false){
-
+                gameActive.color = Color.red;
                 // reset score.
                 flag = true;
             }

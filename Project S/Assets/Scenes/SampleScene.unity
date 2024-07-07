@@ -1155,6 +1155,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 606388262}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &631997282 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5433755289628471402, guid: c8e96145a5185469bae4e61896877655, type: 3}
+  m_PrefabInstance: {fileID: 8130713011207725662}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &670043704
 GameObject:
   m_ObjectHideFlags: 0
@@ -1548,6 +1559,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 257344519}
+    - target: {fileID: 8131618316706750522, guid: e2171f53e414945b89d2f18795d48c38, type: 3}
+      propertyPath: gameActive
+      value: 
+      objectReference: {fileID: 631997282}
     - target: {fileID: 8131618316706750522, guid: e2171f53e414945b89d2f18795d48c38, type: 3}
       propertyPath: Environment
       value: 
@@ -4815,6 +4830,10 @@ PrefabInstance:
     - target: {fileID: 8259438572270064876, guid: c8e96145a5185469bae4e61896877655, type: 3}
       propertyPath: m_Name
       value: RPanelContainer
+      objectReference: {fileID: 0}
+    - target: {fileID: 9220536776632706621, guid: c8e96145a5185469bae4e61896877655, type: 3}
+      propertyPath: m_Name
+      value: panelActive
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7737644072735359937, guid: c8e96145a5185469bae4e61896877655, type: 3}
