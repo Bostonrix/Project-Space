@@ -11,7 +11,7 @@ public class EnvironmentHandler : MonoBehaviour
     public float ResearchGoal = 100;
     public int Fuel;
     private int Flag;
-    public float criticalDistance = 5000;
+    public float criticalDistance = 10000;
     public float safeAltitudeMin;
     public float safeAltitudeMax;
     public bool inDisarray;
@@ -20,13 +20,13 @@ public class EnvironmentHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Altitude = 60000;
+        Altitude = 40000;
         Fuel = 100;
         Flag = 1;
         Research = 0;
         ResearchGoal = 100;
-        safeAltitudeMin = 40000;
-        safeAltitudeMax = 65000;
+        safeAltitudeMin = 25000;
+        safeAltitudeMax = 40000;
         altitudeLossRate = 30;
 
     }
@@ -48,11 +48,11 @@ public class EnvironmentHandler : MonoBehaviour
     // Controls altitude decline rate.
     void AltitudeHandler() {
         if (Flag == 1){
-            if (Altitude >= 18000){
+            if (Altitude >= 36000){
             Altitude -= 1 * Time.deltaTime *altitudeLossRate;
-            } else if (Altitude >= 15000){
+            } else if (Altitude >= 30000){
                 Altitude -= 5 * Time.deltaTime * altitudeLossRate;
-            }else if (Altitude >= 10000){
+            }else if (Altitude >= 20000){
                     Altitude -= 20 * Time.deltaTime * altitudeLossRate;
             }else if (Altitude >= criticalDistance){
                 Altitude -= 50 * Time.deltaTime * altitudeLossRate;

@@ -23,7 +23,7 @@ public class FuelLever : MonoBehaviour
     void Update(){
         if(triggered == true){
             Environment.TryGetComponent<EnvironmentHandler>(out var newVar);
-            newVar.Altitude += 20 * Time.deltaTime;
+            newVar.Altitude += 20 * Time.deltaTime * newVar.altitudeLossRate;
         }
     }
 
